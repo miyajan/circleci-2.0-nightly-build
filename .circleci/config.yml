@@ -6,3 +6,9 @@ jobs:
     steps:
       - run:
           command: echo 'build'
+  nightly-build:
+    docker:
+      - image: buildpack-deps:trusty
+    steps:
+      - run:
+          command: echo 'nightly-build'
