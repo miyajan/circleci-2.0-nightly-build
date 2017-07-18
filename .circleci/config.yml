@@ -1,7 +1,6 @@
 version: 2
 jobs:
-  commit-build:
+  build:
     steps:
       - run:
-          command: echo 'normal build'
-
+          command: echo 'build'
