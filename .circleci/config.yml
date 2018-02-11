@@ -12,3 +12,17 @@ jobs:
     steps:
       - run:
           command: echo 'nightly-build'
+workflows:
+  commit-workflow:
+    jobs:
+      - build
+  scheduled-workflow:
+    triggers:
+      - schedule:
+          cron: "40 * * * *"
+          filters:
+            branches:
+              only:
+                - master
+    jobs:
+      - nightly-build
