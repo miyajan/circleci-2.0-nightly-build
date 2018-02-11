@@ -13,6 +13,7 @@ jobs:
       - run:
           command: echo 'nightly-build'
 workflows:
+  version: 2
   commit-workflow:
     jobs:
       - build
